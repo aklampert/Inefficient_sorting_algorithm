@@ -1,13 +1,12 @@
-package klamand;
-
 public class Sort2 {
-//The purpose of this code was for learning puproses strictly. It is too inefficient for any serious use
-//I had an idea I wanted to implement, regardless of it's inefficiencies
-//Forced me to get better at method writing and how to manipulate arrays
-//Note that for 100,000 elements in array, it took about 15 seconds for this algorithm to sort
-//Method descriptions yet to come
 
 	public static void main(String[] args){
+	
+	//The purpose of this code was for learning puproses strictly. It is too inefficient for any serious use
+	//I had an idea I wanted to implement, regardless of it's inefficiencies
+	//Forced me to get better at method writing and how to manipulate arrays
+	//Note that for 100,000 elements in array, it took about 15 seconds for this algorithm to sort
+	//Method descriptions yet to come
 		int[] array = {93, 4, 18, 84, 96, 3, 3, 4, 12, 9, 78, 49, 101, 249, 15};
 
 		for(int e : sort2lg(array)) System.out.print(e + " ");
@@ -179,3 +178,4 @@ public class Sort2 {
 		else return a;
 	}
 }
+
