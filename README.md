@@ -36,11 +36,11 @@ public class Sort2 {
 		
 		sort[sort.length-1] = simArray[0];		
 		return sort;
-  }
-  */
+  	}
+  	*/
   
-  //method that returns an array ordered from least to greatest
-  public static int[] sort2lg(int[] array){
+  	//method that returns an array ordered from least to greatest
+ 	 public static int[] sort2lg(int[] array){
 		int index;
 		int temp;
 		int count;
@@ -92,61 +92,61 @@ public class Sort2 {
 		}
 		return newArray;
 	}
-  */
+  	*/
   
-  //method that returns an array of indexes corresponding to an element's appearance in an array
-	public static int[] findAllIndexes(int[] array, int key){
-		int[] indexes = new int[1];
-		int count = findAllInstances(array, key);
-		if(count > 1){
-			indexes = copyAdd(indexes, count-1);
-			int k = 0;
-			int j = 0;
-			while(k<array.length){
-				if(array[k]==key){
-					indexes[j] = k;
-					j++;
+ 	 //method that returns an array of indexes corresponding to an element's appearance in an array
+		public static int[] findAllIndexes(int[] array, int key){
+			int[] indexes = new int[1];
+			int count = findAllInstances(array, key);
+			if(count > 1){
+				indexes = copyAdd(indexes, count-1);
+				int k = 0;
+				int j = 0;
+				while(k<array.length){
+					if(array[k]==key){
+						indexes[j] = k;
+						j++;
+					}
+					k++;
 				}
-				k++;
 			}
+			else{
+				for(int i = 0; i<array.length; i++){
+					if(array[i]==key) {
+          					indexes[0] = i;
+          					break;
+        				}
+				}
+			}
+			return indexes;
 		}
-		else{
+	
+  	//method that counts the amount of times an element appears in array
+		public static int findAllInstances(int[] array, int key){
+			int count = 0;
 			for(int i = 0; i<array.length; i++){
-				if(array[i]==key) {
-          indexes[0] = i;
-          break;
-        }
+				if(key==array[i]) count++;
 			}
+			return count;	
 		}
-		return indexes;
-	}
 	
-  //method that counts the amount of times an element appears in array
-	public static int findAllInstances(int[] array, int key){
-		int count = 0;
-		for(int i = 0; i<array.length; i++){
-			if(key==array[i]) count++;
-		}
-		return count;	
-	}
-	
-  //method that returns an array with length increase of given size
-	public static int[] copyAdd(int[] array, int size){
-		int[] newArray = new int[array.length+size];
+  	//method that returns an array with length increase of given size
+		public static int[] copyAdd(int[] array, int size){
+			int[] newArray = new int[array.length+size];
     
-    if(size < 0) newArray = array;
-    else{
-		  for(int i = 0; i<array.length;i++){
-			  newArray[i] = array[i];
-		  }
-		array=newArray;
-    }
-		return array;
-	}
+    			if(size < 0) newArray = array;
+    			else{
+		  		for(int i = 0; i<array.length;i++){
+			  		newArray[i] = array[i];
+		  		}
+				array=newArray;
+    			}
+			return array;
+		}
 	
-  //method that returns the first index (or only index if no repeats) an specific element in an array
-  //Returns -1 if the element is not in the array
-  public static int findIndex(int[] array, int key){
+ 	 //method that returns the first index (or only index if no repeats) an specific element in an array
+ 	 //Returns -1 if the element is not in the array
+ 	 public static int findIndex(int[] array, int key){
 		int index = -1;
 		for(int i = 0; i < array.length; i++){
 			if(array[i] == key){
@@ -157,7 +157,7 @@ public class Sort2 {
 		return index;
 	}
   
-  //method that returns the minimum of an array
+  	//method that returns the minimum of an array
 	public static int min(int[] array){
 		int k=0;
 		int min=min(array[0],array[1]);
@@ -173,7 +173,7 @@ public class Sort2 {
 	}
 	
 	//method which returns the minimum of two given integers
-  public static int min(int a, int b){
+  	public static int min(int a, int b){
 		if(a>=b) return b;
 		else return a;
 	}
